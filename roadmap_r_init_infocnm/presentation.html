@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Roadmap de iniciação ao R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Guilherme Viegas" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet/leaflet.js"></script>
+    <link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
+    <script src="libs/Proj4Leaflet/proj4-compressed.js"></script>
+    <script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding/leaflet.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Roadmap de iniciação ao R
+### Guilherme Viegas
+### Ciências Econômicas, UFSC
+### 2020/12/08
+
+---
+
+
+
+
+class: center, middle
+
+# Guilherme Viegas
+
+## Graduando em Economia - UFSC 2018.1
+
+## Cientista de dados júnior pela Aquarela Advanced Analytics
+
+### guilhermeviegas1993@gmail.com
+
+### [LinkedIn](https://www.linkedin.com/in/guilherme-viegas-1b5b0495/)
+
+---
+class: inverse, center, middle
+
+# Bora entender o R através de uma perspectiva mais ampla
+
+---
+## O que é o R?
+
+- Linguagem de programação com orientação funcional
+
+
+
+## O que é o RStudio?
+
+- IDE para melhor utilizar o R
+
+- IDE -&gt; Integrated development environment (Ambiente de desenvolvimento integrado)
+
+---
+## O que é preciso para aprender R?
+- Tempo;
+- Paciência;
+- Resiliência;
+- Capacidade de raciocínio lógico funcional;
+- Interesse por métodos quantitativos;
+- Computador razoável;
+- Inglês é um plus.
+
+---
+## Pq aprender uma linguagem de programação como o R?
+- Reproducibilidade (Para se fazer ciência é preciso reproduzir de estudos e pesquisas de maneira consistente)
+
+- Python e outras linguagens de programação também proporcionam essa motivação.
+
+- Excelente integração com a linguagem de marcação Latex
+
+---
+## Latex
+
+#### Linguagem de marcação matemática
+
+```
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$$
+```
+
+`$$\bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$$`
+```
+$$y=\beta_0+\beta_1x+e$$
+```
+`$$y=\beta_0+\beta_1x+e$$`
+---
+## Mas lembre-se
+
+### O perfeito é inimigo do bom
+
+- Tente não gastar mais tempo do que necessario em cada tarefa 
+
+- Semestre a semestre, busque utilizar recorrentemente diferentes estrumentais em cada tarefa
+
+- Boa documentação é chave
+---
+&lt;img src="https://i.pinimg.com/originals/a4/31/4a/a4314a37a2a0a1ce775d55b4c8b1383d.png" width="100%" /&gt;
+
+---
+## O poder do R está em seus pacote/bibliotecas
+
+- Comunidade mais alinhada com a academia
+
+### Alguns dos principais pacotes do R são
+
+- dplyr - Tratamento de dados
+- tidyr - Tratamento de dados
+- ggplot2 - Visualizações estáticas
+- plotly - Visualizações dinâmicas
+- knitr - Relatórios
+- gganimate - animações/gifs
+- shiny - Aplicações dinâmicas
+- h2o - Machine Learning
+- leaflet - Mapas iterativos
+- DT (DataTable) - Tabelas iterativas
+- sp - Análise espacial
+- zoo - Séries temporais
+- quandl - API para acesso à dados
+- sidrar - API do SIDRA pra R
+
+---
+## R code
+
+
+```r
+head(x = mtcars, n = 15)
+```
+
+```
+##                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4          21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag      21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710         22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive     21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout  18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
+## Valiant            18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
+## Duster 360         14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
+## Merc 240D          24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
+## Merc 230           22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
+## Merc 280           19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
+## Merc 280C          17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
+## Merc 450SE         16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
+## Merc 450SL         17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
+## Merc 450SLC        15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
+## Cadillac Fleetwood 10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
+```
+
+---
+## R code
+
+```r
+summary(lm(formula = mpg ~ hp, data = mtcars))
+```
+
+```
+## 
+## Call:
+## lm(formula = mpg ~ hp, data = mtcars)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -5.7121 -2.1122 -0.8854  1.5819  8.2360 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 30.09886    1.63392  18.421  &lt; 2e-16 ***
+## hp          -0.06823    0.01012  -6.742 1.79e-07 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 3.863 on 30 degrees of freedom
+## Multiple R-squared:  0.6024,	Adjusted R-squared:  0.5892 
+## F-statistic: 45.46 on 1 and 30 DF,  p-value: 1.788e-07
+```
+
+---
+#### R code
+
+
+```r
+library(ggplot2)
+ggplot(data = mtcars, aes(y = mpg, x = hp))+
+  geom_point()+
+  geom_smooth(method='lm', formula= y~x, se = FALSE)+
+  theme_minimal()
+```
+
+![](presentation_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+---
+#### R code
+
+```r
+leaflet::leaflet() %&gt;% 
+  leaflet::addTiles() %&gt;% 
+  leaflet::setView(lng = -48.521680, lat = -27.598965, zoom = 13) %&gt;% 
+  leaflet::addMarkers(lng = -48.521680, lat = -27.598965, popup = 'CSE')
+```
+
+<div id="htmlwidget-4c3399d5757e8b965d9f" style="width:100%;height:360px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4c3399d5757e8b965d9f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-27.598965,-48.52168,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"CSE",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[-27.598965,-48.52168],13,[]],"limits":{"lat":[-27.598965,-27.598965],"lng":[-48.52168,-48.52168]}},"evals":[],"jsHooks":[]}</script>
+
+---
+## Na dúvida, pergunte ao RStudio
+
+- help(head)
+
+- ?head
+
+- Google (How to ... in r / Como aplicar ... em r)
+
+- Stack overflow (largest, most trusted online community for developers to learn, share their programming knowledge, and build their careers.)
+
+
+---
+## Onde estudar:
+- [R for Data Science](https://r4ds.had.co.nz/) 
+- [Datacamp](https://www.datacamp.com/courses/free-introduction-to-r) (app gratuito para android; Bom para se aprender a sintaxe)
+- https://rstudio.com/resources/books/
+- https://www.curso-r.com/blog/
+- [Jurimetria com aplicações em R](https://abjur.github.io/ser2018/)
+- https://analisemacro.com.br/category/data-science/dicas-de-rstats/
+- [Forecasting: principles and practice](https://otexts.com/fpp3/)
+- [Análise dos discursos de Getúlio Vargas em R](https://terracoeconomico.com.br/usando-r-para-analisar-os-discursos-de-getulio-vargas/)
+- [Vocabulary - Advanced R](http://adv-r.had.co.nz/Vocabulary.html)
+- [SER](http://ser.uff.br/) - Seminário de Estatística com R
+- [R Brasil](https://www.facebook.com/groups/1410023525939155) no fb
+
+---
+## Onde codar?
+- Você pode instalar o R em seu computador para ter melhor performance e controle sobre o software;
+
+- Pode instalar através de containers Docker;
+
+-  ou utilizar a [R cloud](https://rstudio.cloud/) para uma experiência mais prática e simples. [https://rstudio.cloud/]
+
+- (Pra quem optar por Python, tem o [google colab](https://colab.research.google.com/) para desenvolver on-line)
+
+---
+## Conteúdo:
+
+- Scripts Introdução ao R 1 e 2
+
+- Rmarkdown dos índices de inflação em R, pdf e html
+
+- [Neutralidade da moeda na era covid19: Uma análise animada através do R](https://medium.com/@guilhermeviegas/neutralidade-da-moeda-na-era-covid19-uma-an%C3%A1lise-animada-atrav%C3%A9s-do-r-b79cc0f3ee98?sk=b1a0b0ec9f4ecc9fda068c68131102cf)
+
+- App Excedente do consumidor Shiny
+
+- [App probabilidade em distribuições Normais](https://www.aquare.la/a-distribuicao-normal-em-data-analytics/)
+
+- [OSESC - Observatório SocioEconômico de Santa Catarina](https://guigo.shinyapps.io/OSESC/)
+
+---
+class: inverse, center, middle
+
+# Obrigado!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

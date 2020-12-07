@@ -1,0 +1,68 @@
+---
+title: "Tarefa 1 - Informática para Economistas"
+author: "Guilherme Viegas"
+date: "27/09/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+if(!require("dplyr")){install.packages("dplyr")}
+if(!require("tidyr")){install.packages("tidyr")}
+if(!require("janitor")){install.packages("janitor")}
+if(!require("lubridate")){install.packages("lubridate")}
+if(!require("sidrar")){install.packages("sidrar")}
+if(!require("ggplot2")){install.packages("ggplot2")}
+if(!require("knitr")){install.packages("knitr")}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE)
+```
+
+
+##### Tabela 7060 - IPCA - Variação mensal, acumulada no ano, acumulada em 12 meses e peso mensal, para o índice geral, grupos, subgrupos, itens e subitens de produtos e serviços (a partir de janeiro/2020)
+```
+sidrar::get_sidra(x = "7060", period = "all") %>% 
+  janitor::clean_names() %>% 
+  dplyr::filter(
+    geral_grupo_subgrupo_item_e_subitem %in% c(
+      "1.Alimentação e bebidas", 
+      "2.Habitação", 
+      "3.Artigos de residência", 
+      "4.Vestuário", 
+      "5.Transportes", 
+      "6.Saúde e cuidados pessoais",
+      "7.Despesas pessoais", 
+      "8.Educação",  
+      "9.Comunicação"
+    )
+  ) %>% 
+  dplyr::filter(variavel == "IPCA - Variação mensal") %>% 
+  dplyr::select(mes_codigo, geral_grupo_subgrupo_item_e_subitem, valor) %>% 
+  tidyr::spread(key = mes_codigo, value = valor) %>% 
+  dplyr::rename("Grupo" = "geral_grupo_subgrupo_item_e_subitem") %>% 
+  knitr::kable(.)
+
+```
+
+```{r sidra_data}
+sidrar::get_sidra(x = "7060", period = "all") %>% 
+  janitor::clean_names() %>% 
+  dplyr::filter(
+    geral_grupo_subgrupo_item_e_subitem %in% c(
+      "1.Alimentação e bebidas", 
+      "2.Habitação", 
+      "3.Artigos de residência", 
+      "4.Vestuário", 
+      "5.Transportes", 
+      "6.Saúde e cuidados pessoais",
+      "7.Despesas pessoais", 
+      "8.Educação",  
+      "9.Comunicação"
+    )
+  ) %>% 
+  dplyr::filter(variavel == "IPCA - Variação mensal") %>% 
+  dplyr::select(mes_codigo, geral_grupo_subgrupo_item_e_subitem, valor) %>% 
+  tidyr::spread(key = mes_codigo, value = valor) %>% 
+  dplyr::rename("Grupo" = "geral_grupo_subgrupo_item_e_subitem") %>% 
+  knitr::kable(.)
+```
+##### Fonte: IBGE - Índice Nacional de Preços ao Consumidor Amplo
+

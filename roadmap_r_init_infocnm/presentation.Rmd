@@ -1,0 +1,206 @@
+---
+title: "Roadmap de iniciação ao R"
+subtitle: " "
+author: "Guilherme Viegas"
+institute: "Ciências Econômicas, UFSC"
+date: "2020/12/08"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: center, middle
+
+# Guilherme Viegas
+
+## Graduando em Economia - UFSC 2018.1
+
+## Cientista de dados júnior pela Aquarela Advanced Analytics
+
+### guilhermeviegas1993@gmail.com
+
+### [LinkedIn](https://www.linkedin.com/in/guilherme-viegas-1b5b0495/)
+
+---
+class: inverse, center, middle
+
+# Bora entender o R através de uma perspectiva mais ampla
+
+---
+## O que é o R?
+
+- Linguagem de programação com orientação funcional
+
+
+
+## O que é o RStudio?
+
+- IDE para melhor utilizar o R
+
+- IDE -> Integrated development environment (Ambiente de desenvolvimento integrado)
+
+---
+## O que é preciso para aprender R?
+- Tempo;
+- Paciência;
+- Resiliência;
+- Capacidade de raciocínio lógico funcional;
+- Interesse por métodos quantitativos;
+- Computador razoável;
+- Inglês é um plus.
+
+---
+## Pq aprender uma linguagem de programação como o R?
+- Reproducibilidade (Para se fazer ciência é preciso reproduzir de estudos e pesquisas de maneira consistente)
+
+- Python e outras linguagens de programação também proporcionam essa motivação.
+
+- Excelente integração com a linguagem de marcação Latex
+
+---
+## Latex
+
+#### Linguagem de marcação matemática
+
+```
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$$
+```
+
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$$
+```
+$$y=\beta_0+\beta_1x+e$$
+```
+$$y=\beta_0+\beta_1x+e$$
+---
+## Mas lembre-se
+
+### O perfeito é inimigo do bom
+
+- Tente não gastar mais tempo do que necessario em cada tarefa 
+
+- Semestre a semestre, busque utilizar recorrentemente diferentes estrumentais em cada tarefa
+
+- Boa documentação é chave
+---
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("https://i.pinimg.com/originals/a4/31/4a/a4314a37a2a0a1ce775d55b4c8b1383d.png")
+```
+
+---
+## O poder do R está em seus pacote/bibliotecas
+
+- Comunidade mais alinhada com a academia
+
+### Alguns dos principais pacotes do R são
+
+- dplyr - Tratamento de dados
+- tidyr - Tratamento de dados
+- ggplot2 - Visualizações estáticas
+- plotly - Visualizações dinâmicas
+- knitr - Relatórios
+- gganimate - animações/gifs
+- shiny - Aplicações dinâmicas
+- h2o - Machine Learning
+- leaflet - Mapas iterativos
+- DT (DataTable) - Tabelas iterativas
+- sp - Análise espacial
+- zoo - Séries temporais
+- quandl - API para acesso à dados
+- sidrar - API do SIDRA pra R
+
+---
+## R code
+
+```{r}
+head(x = mtcars, n = 15)
+```
+
+---
+## R code
+```{r}
+summary(lm(formula = mpg ~ hp, data = mtcars))
+```
+
+---
+#### R code
+
+```{r fig.height=5, fig.width=11}
+library(ggplot2)
+ggplot(data = mtcars, aes(y = mpg, x = hp))+
+  geom_point()+
+  geom_smooth(method='lm', formula= y~x, se = FALSE)+
+  theme_minimal()
+```
+
+---
+#### R code
+```{r out.width='100%', fig.height=5, eval=require('leaflet')}
+leaflet::leaflet() %>% 
+  leaflet::addTiles() %>% 
+  leaflet::setView(lng = -48.521680, lat = -27.598965, zoom = 13) %>% 
+  leaflet::addMarkers(lng = -48.521680, lat = -27.598965, popup = 'CSE')
+```
+
+---
+## Na dúvida, pergunte ao RStudio
+
+- help(head)
+
+- ?head
+
+- Google (How to ... in r / Como aplicar ... em r)
+
+- Stack overflow (largest, most trusted online community for developers to learn, share their programming knowledge, and build their careers.)
+
+
+---
+## Onde estudar:
+- [R for Data Science](https://r4ds.had.co.nz/) 
+- [Datacamp](https://www.datacamp.com/courses/free-introduction-to-r) (app gratuito para android; Bom para se aprender a sintaxe)
+- https://rstudio.com/resources/books/
+- https://www.curso-r.com/blog/
+- [Jurimetria com aplicações em R](https://abjur.github.io/ser2018/)
+- https://analisemacro.com.br/category/data-science/dicas-de-rstats/
+- [Forecasting: principles and practice](https://otexts.com/fpp3/)
+- [Análise dos discursos de Getúlio Vargas em R](https://terracoeconomico.com.br/usando-r-para-analisar-os-discursos-de-getulio-vargas/)
+- [Vocabulary - Advanced R](http://adv-r.had.co.nz/Vocabulary.html)
+- [SER](http://ser.uff.br/) - Seminário de Estatística com R
+- [R Brasil](https://www.facebook.com/groups/1410023525939155) no fb
+
+---
+## Onde codar?
+- Você pode instalar o R em seu computador para ter melhor performance e controle sobre o software;
+
+- Pode instalar através de containers Docker;
+
+-  ou utilizar a [R cloud](https://rstudio.cloud/) para uma experiência mais prática e simples. [https://rstudio.cloud/]
+
+- (Pra quem optar por Python, tem o [google colab](https://colab.research.google.com/) para desenvolver on-line)
+
+---
+## Conteúdo:
+
+- Scripts Introdução ao R 1 e 2
+
+- Rmarkdown dos índices de inflação em R, pdf e html
+
+- [Neutralidade da moeda na era covid19: Uma análise animada através do R](https://medium.com/@guilhermeviegas/neutralidade-da-moeda-na-era-covid19-uma-an%C3%A1lise-animada-atrav%C3%A9s-do-r-b79cc0f3ee98?sk=b1a0b0ec9f4ecc9fda068c68131102cf)
+
+- App Excedente do consumidor Shiny
+
+- [App probabilidade em distribuições Normais](https://www.aquare.la/a-distribuicao-normal-em-data-analytics/)
+
+- [OSESC - Observatório SocioEconômico de Santa Catarina](https://guigo.shinyapps.io/OSESC/)
+
+---
+class: inverse, center, middle
+
+# Obrigado!
