@@ -190,11 +190,13 @@ leaflet::leaflet() %>%
 
 - Scripts Introdução ao R 1 e 2
 
-- Rmarkdown dos índices de inflação em R, pdf e html
+- Rmarkdown do IPCA através do pacote sidrar, pdf e html
 
 - [Neutralidade da moeda na era covid19: Uma análise animada através do R](https://medium.com/@guilhermeviegas/neutralidade-da-moeda-na-era-covid19-uma-an%C3%A1lise-animada-atrav%C3%A9s-do-r-b79cc0f3ee98?sk=b1a0b0ec9f4ecc9fda068c68131102cf)
 
-- App Excedente do consumidor Shiny
+- Gráfico do excedente do consumidor - ggplot2
+
+- App Excedente do consumidor - Shiny
 
 - [App probabilidade em distribuições Normais](https://www.aquare.la/a-distribuicao-normal-em-data-analytics/)
 

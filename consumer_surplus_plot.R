@@ -49,7 +49,7 @@ ggplot()+
   # geom_polygon(aes(x = c(df$x[c(3, 6)], 0), y = c(df$y[c(3, 6)], 0))) +
   geom_polygon(aes(x = triang$x, y = triang$y), fill = "seagreen3", alpha = 0.3) +
   labs(
-    title = "Consumer Surplus Explpained", 
+    title = "Consumer Surplus Explained", 
     caption = "help_infoCNM", 
     x = "Quantidade", 
     y= "Preço"
