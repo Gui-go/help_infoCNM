@@ -188,15 +188,15 @@ leaflet::leaflet() %>%
 ---
 ## Conteúdo:
 
-- Scripts Introdução ao R 1 e 2
+- Scripts de Introdução ao R [Intro1](https://github.com/Gui-go/help_infoCNM/blob/main/intro1.R) e [Intro2](https://github.com/Gui-go/help_infoCNM/blob/main/intro2.R)
 
-- Rmarkdown do IPCA através do pacote sidrar, pdf e html
+- [Rmarkdown do IPCA através do pacote sidrar](https://github.com/Gui-go/help_infoCNM/blob/main/trab1_IPCA.Rmd)
 
 - [Neutralidade da moeda na era covid19: Uma análise animada através do R](https://medium.com/@guilhermeviegas/neutralidade-da-moeda-na-era-covid19-uma-an%C3%A1lise-animada-atrav%C3%A9s-do-r-b79cc0f3ee98?sk=b1a0b0ec9f4ecc9fda068c68131102cf)
 
-- Gráfico do excedente do consumidor - ggplot2
+- [Gráfico do excedente do consumidor](https://github.com/Gui-go/help_infoCNM/blob/main/consumer_surplus_plot.R)
 
-- App Excedente do consumidor - Shiny
+- [App do Excedente do consumidor](https://github.com/Gui-go/help_infoCNM/blob/main/consumer_surplus_app.R)
 
 - [App probabilidade em distribuições Normais](https://www.aquare.la/a-distribuicao-normal-em-data-analytics/)
 
